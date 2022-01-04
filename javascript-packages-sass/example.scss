@@ -1,0 +1,43 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #fff;
+
+@mixin theme($theme: DarkRed){
+    font: 100 $font-stack  !important;
+    background-color: $theme;
+    color:$primary-color;
+}
+
+@mixin division(){
+    padding: 10;
+    margin: 50 50;
+    @include theme;
+}
+
+body{
+    @include theme;
+}
+
+#brightness-xs{
+    @include division;
+    filter:brightness(0.25);
+}
+
+.brightness-s{
+    @include division;
+    filter:brightness(0.5);
+}
+
+.brightness-m{
+    @include division;
+    filter:brightness(1);
+}
+
+.brightness-l{
+    @include division;
+    filter:brightness(1.5);
+}
+
+.brightness-xl{
+    @include division;
+    filter:brightness(2);
+}

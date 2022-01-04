@@ -1,0 +1,60 @@
+.container#menu-container{
+    margin: 50px auto;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 375px;
+    border-radius: 10px;
+}
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #E62020;
+    height: 100vh;
+}
+
+input[name="btn-group"]{
+    font-weight: bold;
+}
+
+#timer-text.timer-text{
+    font-weight: bold;
+    font-size: 125px;
+    color: white;
+}
+
+#btn-start.btn-start{
+    font-weight: bold;
+    font-size: 30px;
+    color: #E62020;
+    background-color:white;
+    width:200px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.15);
+}
+
+#btn-group .btn-color{
+    font-weight: bold;
+    font-size:17px;
+    color: white;   
+}
+
+#btn-group .btn-color:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn-active{
+    background-color: rgba(0, 0, 0, 0.15) !important;;
+}
+
+.navbar-text{
+    font-weight: bold;
+    color: white !important;
+    margin-top: 50px;
+    font-size: 35px !important;
+}
+
+.sexy_image{
+    color: black;
+}

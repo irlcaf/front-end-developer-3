@@ -1,0 +1,52 @@
+body {
+  font: 100 Helvetica, sans-serif !important;
+  background-color: DarkRed;
+  color: #fff;
+}
+
+#brightness-xs {
+  padding: 10;
+  margin: 50 50;
+  font: 100 Helvetica, sans-serif !important;
+  background-color: DarkRed;
+  color: #fff;
+  filter: brightness(0.25);
+}
+
+.brightness-s {
+  padding: 10;
+  margin: 50 50;
+  font: 100 Helvetica, sans-serif !important;
+  background-color: DarkRed;
+  color: #fff;
+  filter: brightness(0.5);
+}
+
+.brightness-m {
+  padding: 10;
+  margin: 50 50;
+  font: 100 Helvetica, sans-serif !important;
+  background-color: DarkRed;
+  color: #fff;
+  filter: brightness(1);
+}
+
+.brightness-l {
+  padding: 10;
+  margin: 50 50;
+  font: 100 Helvetica, sans-serif !important;
+  background-color: DarkRed;
+  color: #fff;
+  filter: brightness(1.5);
+}
+
+.brightness-xl {
+  padding: 10;
+  margin: 50 50;
+  font: 100 Helvetica, sans-serif !important;
+  background-color: DarkRed;
+  color: #fff;
+  filter: brightness(2);
+}
+
+/*# sourceMappingURL=example.css.map */
