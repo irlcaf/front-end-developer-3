@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting Started</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg  justify-content-center navbar-light bg-light">
+        <div class="container-fluid">
+            <a class = "navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class = "navbar-nav">
+                    <li class="nav-tabs">
+                        <a class ="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-tabs">
+                        <a class ="nav-link " href="#">Features</a>
+                    </li>
+                    <li class="nav-pills">
+                        <a class ="nav-link " href="#">Pricing</a>
+                    </li>
+                    <li class="nav-pills dropdown">
+                        <a class ="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown Link</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Another another action</a></li>
+                        </ul>
+                    </li>
+                </ul>                
+            </div>
+        </div>
+    </nav>
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialogue" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>I'm the header here!</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Im just a random text</p>
+                </div>
+                <div class="modal-footer">
+                    <p>Im also just a random text but for footer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-md">
+        <img class="card-img-top" src="ritolas.JPG" style="height:250px;width:150px">
+        <div class="card-body">
+            <h5 class="card-title" >Card Title?</h5>
+            <p class="card-text">I'm just the text of the card</p>
+            <a class="btn btn-primary">Im just another button too!</a>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
