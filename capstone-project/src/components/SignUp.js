@@ -1,15 +1,30 @@
-import React, { useRef } from "react";
-import { Form, Card, Button } from "react-bootstrap";
+import React, { useRef, useState, useContext } from "react";
+import { Form, Card, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 
 export default function SignUp() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { signup } = useAuth();
-  function handleSubmit(e) {
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { signup, currentUser } = useAuth();
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    signup(emailRef.current.value, passwordRef.current.value);
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError("Passwords do not match");
+    }
+
+    try {
+      setError("");
+      setLoading(true);
+      console.log(signup(emailRef.current.value, passwordRef.current.value));
+      await signup(emailRef.current.value, passwordRef.current.value);
+    } catch {
+      setError("Failed to create an account");
+    }
+    setLoading(false);
   }
 
   return (
@@ -17,7 +32,9 @@ export default function SignUp() {
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
-          <Form>
+          {currentUser}
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required></Form.Control>
@@ -38,7 +55,11 @@ export default function SignUp() {
                 required
               ></Form.Control>
             </Form.Group>
-            <Button type="submit" className="w-100 text-center mt-4">
+            <Button
+              disabled={loading}
+              type="submit"
+              className="w-100 text-center mt-4"
+            >
               Sign Up!
             </Button>
           </Form>

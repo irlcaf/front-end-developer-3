@@ -1,6 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
+import App from "./components/App.js";
+import NavBar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-ReactDOM.render(<h2>Hello world</h2>, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
